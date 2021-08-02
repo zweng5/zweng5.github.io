@@ -3,7 +3,7 @@ function run() {
   $.when(
       $.ajax({
           type: "GET",
-          url: './stats.json',
+          url: './stats.json?nocache',
           contentType: "application/json; charset=utf-8",
           dataType: "text",
           success: function(data) {

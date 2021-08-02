@@ -17,7 +17,7 @@ function run() {
     //# show stats
     //console.log(results);
     div = $("<div>").html(parseInt(results["stats"]["days_since_last_local_covid"])
-      + "<div class=\"small\">days since last local Covid-19 case in HK!</div>");
+      + "<div class=\"small\">days since the last local Covid-19 case in HK!</div>");
     div.addClass("number");
     $("#container").append(div);
     

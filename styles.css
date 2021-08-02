@@ -1,10 +1,14 @@
+body {
+  font-size: 1.3em;
+}
+
 #container {
   margin: auto;
   text-align:center;
 }
 
 .number {
-  font-size: 28pt;
+  font-size: 3em;
   width: 150px;
   margin: auto;
   padding-bottom: 20px;
@@ -17,5 +21,5 @@
 }
 
 .small {
-  font-size: 10pt;
+  font-size: .3em;
 }

@@ -1,0 +1,22 @@
+#container {
+  width: 500px;
+  margin: auto;
+  text-align:center;
+}
+
+.number {
+  font-size: 28pt;
+  width:150px;
+  margin:auto;
+  padding-bottom: 20px;
+}
+
+.info {
+  width:150px;
+  margin:auto;
+  padding-bottom: 20px;
+}
+
+.small {
+  font-size: 10pt;
+}

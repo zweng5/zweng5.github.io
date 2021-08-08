@@ -72,7 +72,7 @@ function run() {
       buffer += "(" + n + " " +
       (n > 1) ? "are" : "is a" +
       "local case" +
-      (n > 1) ? "s" : "") +
+      (n > 1) ? "s" : "" +
       ")";
     }
     buffer += "</div>";

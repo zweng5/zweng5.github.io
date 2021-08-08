@@ -63,16 +63,18 @@ function run() {
     number_hospitalised = parseInt(results["stats"]["number_hospitalised"]);
     buffer = number_hospitalised +
       "<div class=\"small\">people " +
-      (number_hospitalised > 1) ? "are" : "is" +
+      ((number_hospitalised > 1) ? "are" : "is") +
       " currently hospitalised ";
     n = parseInt(results["stats"]["hospitalised_local_cases"]);
     if(n == 0) {
       buffer += "(all are imported cases)";
+    } else if(n==number_hospitalised) {
+      buffer += "(all are local cases)";
     } else {
-      buffer += "(" + n + " " +
-      (n > 1) ? "are" : "is a" +
-      "local case" +
-      (n > 1) ? "s" : "" +
+      buffer += "(" + n + " of which " +
+      ((n > 1) ? "are" : "is a") +
+      " local case" +
+      ((n > 1) ? "s" : "") +
       ")";
     }
     buffer += "</div>";

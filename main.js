@@ -38,11 +38,11 @@ function run() {
     buffer = '';    
     if(results["stats"]["days_since_last_local_covid"] == 
        results["stats"]["longest_no_local_case"]) {
-      buffer = "This is currently the longest period of time without local cases since the start of the pandemic!";
+      buffer = "This is currently the longest period without local cases since the start of the pandemic!";
     } else {
-      buffer = "The longest period of time without local cases was " +
+      buffer = "The longest period without local cases was " +
                 results["stats"]["longest_no_local_case"] +
-               "days";
+               " days";
     }
     div = $("<div>").html(buffer);
     div.addClass("info");

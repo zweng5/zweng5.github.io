@@ -29,7 +29,7 @@ function run() {
       buffer = parseInt(results["stats"]["number_of_too_recent_local_cases"])
       + "<div class=\"small\">case"+s+" within the last " +
           parseInt(results["stats"]["days_waited_for_classification_confirmation"]) +
-          "days, to be confirmed as local or not</div>";
+          " days, to be confirmed as local or not</div>";
       div = $("<div>").html(buffer);
       div.addClass("number");
       $("#container").append(div);
@@ -41,7 +41,7 @@ function run() {
       buffer = "This is currently the longest period of time without local cases since the start of the pandemic!";
     } else {
       buffer = "The longest period of time without local cases was " +
-                results["stats"]["days_since_last_local_covid"] +
+                results["stats"]["longest_no_local_case"] +
                "days";
     }
     div = $("<div>").html(buffer);

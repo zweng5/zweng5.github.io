@@ -35,6 +35,11 @@ function run() {
       $("#container").append(div);
     }
 
+    div = $("<div>").html(parseInt(results["stats"]["days_since_last_local_death"])
+      + "<div class=\"small\">days since the last local Covid-19 death in HK!</div>");
+    div.addClass("number");
+    $("#container").append(div);
+    
     buffer = '';    
     if(results["stats"]["days_since_last_local_covid"] == 
        results["stats"]["longest_no_local_case"]) {

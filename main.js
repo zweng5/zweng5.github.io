@@ -35,11 +35,6 @@ function run() {
       $("#container").append(div);
     }
 
-    div = $("<div>").html(parseInt(results["stats"]["days_since_last_local_death"])
-      + "<div class=\"small\">days since the last local Covid-19 death in HK!</div>");
-    div.addClass("number");
-    $("#container").append(div);
-    
     buffer = '';    
     if(results["stats"]["days_since_last_local_covid"] == 
        results["stats"]["longest_no_local_case"]) {
@@ -53,18 +48,23 @@ function run() {
     div.addClass("info");
     $("#container").append(div);
 
+    div = $("<div>").html(parseInt(results["stats"]["days_since_last_local_death"])
+      + "<div class=\"small\">days since the last local Covid-19 death in HK!</div>");
+    div.addClass("number");
+    $("#container").append(div);
+
     div = $("<div>").html(parseInt(results["stats"]["number_of_deceased"])
       + "<div class=\"small\">deceased victims of Covid-19 in HK since the beginning of the pandemic</div>");
     div.addClass("number");
     $("#container").append(div);
-    
+
     div = $("<div>").html(Math.round(parseFloat(results["stats"]["mean_age_deceased"])*10, 1)/10 +
       "<div class=\"small\">years old is the average age of the deceased victims of Covid-19 in HK (the median age is " +
       Math.round(parseFloat(results["stats"]["median_age_deceased"])*10, 1)/10 +
       " years old)</div>");
     div.addClass("number");
     $("#container").append(div);
-    
+
     number_hospitalised = parseInt(results["stats"]["number_hospitalised"]);
     buffer = number_hospitalised +
       "<div class=\"small\">people " +
